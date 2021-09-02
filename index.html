@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+
+    <title>FastZap</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>FastZap</h1>
+      <h2>Conversar pelo whatsapp sem precisar adicionar o contato</h2>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Telefone com código de área</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          id="telefone"
+          placeholder="(00)000000000"
+          value=""
+        />
+      </div>
+      <div class="mb-3">
+        <button onclick="iniciarConversa()" type="button" class="btn btn-primary">Iniciar conversa</button>
+      </div>
+
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"
+      ></script>
+
+      <script>
+        function iniciarConversa(){
+          const telefone = document.getElementById('telefone').value;
+          window.location = 'https://wa.me/55' + telefone;
+        }
+      </script>
+    </div>
+  </body>
+</html>
