@@ -52,9 +52,9 @@
     <script>
       function iniciarConversa() {
         const telefone = document.getElementById("telefone").value;
-        const exp=/^[0-9]{11,12}$/
+        const exp=/^[0-9]{10,11}$/
         if (!exp.test(telefone)){
-          alert('Telefone deve ter 11 ou 12 números');
+          alert('Telefone deve ter 10 ou 11 números');
           return;
         }
         window.location = "https://wa.me/55" + telefone;
