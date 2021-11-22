@@ -4,7 +4,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="/favicon.png" type="image/png"/>
+    <link rel="icon" href="/favicon.png" type="image/png" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -51,10 +51,12 @@
 
     <script>
       function iniciarConversa() {
-        const telefone = document.getElementById("telefone").value;
-        const exp=/^[0-9]{10,11}$/
-        if (!exp.test(telefone)){
-          alert('Telefone deve ter 10 ou 11 números');
+        const telefone = document
+          .getElementById("telefone")
+          .value.replace(/\D/g, "");
+        const exp = /^[0-9]{10,11}$/;
+        if (!exp.test(telefone)) {
+          alert("Telefone deve ter 10 ou 11 números");
           return;
         }
         window.location = "https://wa.me/55" + telefone;
